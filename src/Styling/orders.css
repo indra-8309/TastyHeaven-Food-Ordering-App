@@ -1,0 +1,47 @@
+.card-img-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+  
+  .card-img-top img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Or cover if you want to fill the space */
+  }
+.card:hover {
+    transform: translateY(5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    transform: scale(1.08);
+  }
+  
+/* Added space to the top to prevent overlap with Navbar */
+.container {
+    margin-top: 60px; /* Increased space between navbar and content */
+  }
+  
+  /* Styling for the order date */
+  .order-date {
+    font-size: 1.5rem;        /* Bigger font size for visibility */
+    font-weight: 600;         /* Bold text */
+    color: #333333;              /* Dark text color */
+    background-color: #d7dae2; /* Light background for contrast */
+    padding: 12px 15px;       /* Adequate padding around the date */
+    border-radius: 8px;       /* Rounded corners */
+    margin-bottom: 15px;      /* Space below the date */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for emphasis */
+    text-transform: uppercase; /* Uppercase for better readability */
+  }
+  
+  /* Additional styling for cards */
+  .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(168, 67, 67, 0.1); /* Card shadow */
+  }
+  
+  /* Ensure image fits nicely in card */
+
+  
+  

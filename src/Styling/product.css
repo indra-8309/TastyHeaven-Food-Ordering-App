@@ -1,0 +1,54 @@
+/* Card container for spacing */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Add bottom margin for spacing */
+    position: relative; /* Required for the absolute positioning of other cards */
+  }
+  
+  /* Enlarge card on hover */
+  .card-container .card {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
+  }
+  
+  /* Hover effect for the card */
+  .card-container:hover .card {
+    transform: scale(1.06); /* Slightly enlarge the card */
+    z-index: 2; /* Ensure the hovered card is above others */
+  }
+  
+  /* Add light fade effect on other cards */
+  .card-container:hover .card:not(:hover) {
+    opacity: 10; /* Fade out other cards */
+  }
+  
+  /* Optionally, you can add a subtle shadow on hover to make the card pop */
+  .card-container .card:hover {
+    box-shadow: 0 8px 20px rgba(176, 40, 40, 0.1); /* Add shadow on hover */
+  }
+  
+  /* Position the "No Match Found" message at the top */
+.no-match-found-top {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #e74c3c; /* Red color */
+  }
+  
+  /* Center "No Match Found" in the middle of the page */
+  .no-match-found-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-container:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  /* Other existing styles... */
+  

@@ -1,0 +1,377 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #004d40;
+}
+/* Hover effect */
+/* Hover effect */
+/* Normal state - white background */
+.navbar-nav .nav-link {
+  color: white;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1); /* Enlarge the text */
+  font-weight: bold; /* Make the text bold */
+  color: white; /* Change text color */
+  background-color: rgba(255, 255, 255, 0.2); /* Soft background color */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Active effect */
+.navbar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3); /* Lighter background */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent border when active */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle shadow */
+}
+
+/* Active effect on focus (when clicked) */
+.navbar-nav .nav-link:focus {
+  outline: none; /* Remove default outline */
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+/* Add these CSS animations to your global stylesheet or inside a <style> tag */
+
+/* Fade-in animation for the navbar items */
+/* Add these CSS animations to your global stylesheet or inside a <style> tag */
+
+/* Fade-in animation for the navbar items */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav .nav-item {
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: 0.2s; /* Delay each navbar item slightly */
+}
+
+/* Hover effect for navbar links (grow on hover) */
+.navbar-nav .nav-item .nav-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  transform: scale(1.1); /* Slightly enlarge the link */
+  color: #ff6347; /* Change color on hover */
+}
+
+/* Apply the animation only to My Orders button */
+.navbar .nav-link.my-order {
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: 0.4s; /* Delayed to appear after navbar items */
+}
+
+/* Dynamic animation for "My Cart" button */
+@keyframes cartBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navbar .btn.bg-white.text-success {
+  animation: cartBounce 1s ease infinite; /* Infinite bounce effect */
+  animation-delay: 0.5s;
+}
+
+/* Shake animation for "Logout" button */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navbar .btn.bg-white.text-danger {
+  animation: shake 0.5s ease-in-out infinite; /* Infinite shake effect */
+}
+
+/* Smooth transition for the cart button */
+.navbar .btn.bg-white.text-success:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth transition for the login/signup buttons */
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #66bb6a;
+  color: white;
+}
+
+
+/* General Card Styling */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-img-top {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  height: 160px;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 15px 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #777;
+}
+
+.card .btn {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.card .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.card .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.card .btn:hover {
+  opacity: 0.9;
+}
+
+.card .btn:focus {
+  box-shadow: none;
+}
+
+.card-body .text-muted {
+  font-size: 14px;
+}
+
+/* Edit Mode Styling */
+.edit-mode input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.edit-mode button {
+  margin-top: 10px;
+}
+
+/* Flexbox Styling for Options */
+/* .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+} */
+
+.d-flex .fw-bold {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.d-flex .text-muted {
+  font-size: 14px;
+}
+
+.d-flex select {
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 5px;
+  width: 120px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+.d-flex .container {
+  margin-top: 10px;
+}
+
+/* Button Group Styling */
+button {
+  border-radius: 25px;
+}
+
+button.btn-sm {
+  font-size: 14px;
+  padding: 6px 15px;
+  border-radius: 25px;
+}
+
+button.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+button.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Cart Quantity Controls */
+button.btn-outline-success {
+  border-radius: 50%;
+  padding: 8px 12px;
+  width: 35px;
+  height: 35px;
+}
+
+.fs-5 {
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-img-top {
+    height: 140px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .d-flex select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .d-flex button {
+    width: 100%;
+  }
+}
