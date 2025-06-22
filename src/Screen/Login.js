@@ -21,8 +21,8 @@ export default function Login() {
 
     try {
       const endpoint = isAdmin
-        ? "https://tasty-heaven-2.onrender.com/api/loginadmin"
-        : "https://tasty-heaven-2.onrender.com/api/loginuser";
+        ? `${process.env.REACT_APP_BASE_URL}/api/loginadmin`
+        : `${process.env.REACT_APP_BASE_URL}/api/loginuser`;
 
       const response = await fetch(endpoint, {
         method: "POST",

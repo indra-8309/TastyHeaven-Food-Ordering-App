@@ -7,7 +7,7 @@ export default function MyOrder() {
   const [orderData, setOrderData] = useState({});
 
   const fetchMyOrder = async () => {
-    await fetch("https://tasty-heaven-2.onrender.com/api/myOrderData", {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/api/myOrderData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

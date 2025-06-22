@@ -54,7 +54,7 @@ export default function AddProduct() {
         return acc;
       }, {});
 
-      const response = await fetch("https://tasty-heaven-2.onrender.com/api/admin/addproduct", {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/admin/addproduct`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

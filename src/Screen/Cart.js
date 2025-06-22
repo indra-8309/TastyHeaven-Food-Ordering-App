@@ -20,7 +20,7 @@ export default function Cart({ hideCart }) {  // Accept hideCart function as a p
     let userEmail = localStorage.getItem("userEmail");
 
     try {
-      let response = await fetch("https://tasty-heaven-2.onrender.com/api/orderData", {
+      let response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/orderData`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
