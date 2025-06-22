@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Carousel } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import NavigationBar from '../components/Navbar';

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert, Button, Form } from "react-bootstrap";
 import { toast, ToastContainer } from "react-toastify";

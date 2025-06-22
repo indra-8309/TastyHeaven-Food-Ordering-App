@@ -9,7 +9,7 @@ mongoDB();
 // Enable CORS for all routes
 app.use(cors());
 app.get("/", (req, res) => {
-  res.send("Hello Indra   ------");
+  res.send("Hello Pravallika   ------");
 });
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")

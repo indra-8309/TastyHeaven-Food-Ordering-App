@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

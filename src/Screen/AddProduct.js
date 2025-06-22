@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import React from "react";
 import { Button, Form } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
