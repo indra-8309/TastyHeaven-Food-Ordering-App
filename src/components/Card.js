@@ -77,7 +77,7 @@ export default function Card(props) {
         description: editDescription,
       };
 
-      await axios.put(`http://localhost:5000/api/foodItem/update/${props.foodItem._id}`, updatedProduct);
+      await axios.put(`https://tasty-heaven-2.onrender.com/api/foodItem/update/${props.foodItem._id}`, updatedProduct);
 
       toast.success("Product updated successfully ✅", {
         position: "top-center",
@@ -101,7 +101,7 @@ export default function Card(props) {
   const handleDeleteProduct = async () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/foodItem/delete/${props.foodItem._id}`);
+        await axios.delete(`https://tasty-heaven-2.onrender.com/api/foodItem/delete/${props.foodItem._id}`);
 
         toast.success("Product deleted successfully 🗑️", {
           position: "top-center",

@@ -24,7 +24,7 @@ export default function AdminCard({ foodItem, fetchProducts }) {
 
   const handleDeleteClick = async () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
-      const response = await fetch(`http://localhost:5000/api/admin/deleteproduct/${foodItem._id}`, {
+      const response = await fetch(`https://tasty-heaven-2.onrender.com/api/admin/deleteproduct/${foodItem._id}`, {
         method: "DELETE",
       });
 
@@ -41,7 +41,7 @@ export default function AdminCard({ foodItem, fetchProducts }) {
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:5000/api/admin/updateproduct/${foodItem._id}`, {
+    const response = await fetch(`https://tasty-heaven-2.onrender.com/api/admin/updateproduct/${foodItem._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

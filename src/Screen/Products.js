@@ -11,7 +11,7 @@ export default function Products() {
 
   const loadData = async () => {
     try {
-      let response = await fetch("http://localhost:5000/api/food_datas", {
+      let response = await fetch("https://tasty-heaven-2.onrender.com/api/food_datas", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

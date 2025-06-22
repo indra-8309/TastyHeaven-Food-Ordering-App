@@ -51,7 +51,7 @@ const Signup = () => {
     setError(""); // Clear any previous error
 
     try {
-      const response = await fetch("http://localhost:5000/api/creatuser", {
+      const response = await fetch("https://tasty-heaven-2.onrender.com/api/creatuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

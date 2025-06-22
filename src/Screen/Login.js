@@ -21,8 +21,8 @@ export default function Login() {
 
     try {
       const endpoint = isAdmin
-        ? "http://localhost:5000/api/loginadmin"
-        : "http://localhost:5000/api/loginuser";
+        ? "https://tasty-heaven-2.onrender.com/api/loginadmin"
+        : "https://tasty-heaven-2.onrender.com/api/loginuser";
 
       const response = await fetch(endpoint, {
         method: "POST",
