@@ -3,10 +3,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mongoDB = require("./db");
 const cors = require("cors");
+require('dotenv').config();
 
 mongoDB();
 
-const cors = require("cors");
 
 const allowedOrigins = [
   "http://localhost:3000", // for local development

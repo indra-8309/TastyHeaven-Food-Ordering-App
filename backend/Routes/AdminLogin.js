@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "secretkey123";
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
 const Admin = require("../models/Admins"); // Your admin model
 const food_datas = require("../models/food_datas");
 
