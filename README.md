@@ -55,8 +55,10 @@ cd tasty-heaven
 cd backend
 npm install
 node index.js
+
 # (Optional) in-order to create an admin
 node admin.js
+
 # admin details
 Email:admin@tastyheaven.com
 Password:kindly contact to pravallika7780@gmail.com
