@@ -38,5 +38,27 @@ TastyHeaven is a full-stack food ordering app where users can browse food items,
 
 ---
 
-## 📦 Folder Structure
+## 🛠️ Installation & Setup (Local Development)
+
+### 📦 Prerequisites
+- Node.js installed
+- MongoDB running locally or via MongoDB Atlas
+
+### 🚀 Run the App Locally
+
+```bash
+# Step 1: Clone the repo
+git clone https://github.com/your-username/tasty-heaven.git
+cd tasty-heaven
+
+# Step 2: Start Backend
+cd server
+npm install
+npm start
+
+# Step 3: Start Frontend
+cd ../client
+npm install
+npm start
+
 
