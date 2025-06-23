@@ -2,15 +2,19 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import ShimmerCard from "../components/ShimmerCard";
 import '../Styling/product.css';
+import '../Styling/shimmer.css'; // Include shimmer + emoji spinner styles
 
 export default function Products() {
   const [search, setSearch] = useState("");
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const loadData = async () => {
     try {
+      setLoading(true);
       let response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/food_datas`, {
         method: "POST",
         headers: {
@@ -20,8 +24,10 @@ export default function Products() {
       response = await response.json();
       setFoodItem(response[0]);
       setFoodCat(response[1]);
+      setLoading(false);
     } catch (error) {
       console.error("Error loading data:", error);
+      setLoading(false);
     }
   };
 
@@ -67,44 +73,58 @@ export default function Products() {
       </div>
 
       <div className="container">
-        {hasNoResults && (
+        {loading ? (
+          <>
+            {/* 🍕 Rotating Emoji Spinner */}
+            {/* <div className="emoji-loader text-center my-4">🍔</div> */}
+
+            {/* ✨ Shimmer Cards */}
+            <div className="row g-4">
+              {[...Array(8)].map((_, index) => (
+                <div key={index} className="col-12 col-md-6 col-lg-3 mb-4">
+                  <ShimmerCard />
+                </div>
+              ))}
+            </div>
+          </>
+        ) : hasNoResults ? (
           <div className="no-match-found d-flex justify-content-center align-items-center text-center text-danger fs-4">
             No Match Found
           </div>
+        ) : (
+          foodCat.map((data) => {
+            const filteredItemsInCategory = filteredItems.find(
+              (item) => item.length > 0 && item[0].CategoryName === data.CategoryName
+            );
+
+            return (
+              <div className="row mb-5" key={data._id}>
+                {filteredItemsInCategory && (
+                  <>
+                    <div className="fs-3 m-3 category-name">
+                      {data.CategoryName}
+                    </div>
+                    <hr />
+                    <div className="row g-4">
+                      {filteredItemsInCategory.map((filterItems, index) => {
+                        const bgColor = index % 2 === 0 ? "#f5f5f5" : "#dcdcdc";
+                        return (
+                          <div key={filterItems._id} className="col-12 col-md-6 col-lg-3 mb-4">
+                            <Card
+                              foodItem={filterItems}
+                              options={filterItems.options[0]}
+                              bgColor={bgColor}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })
         )}
-
-        {foodCat.map((data) => {
-          const filteredItemsInCategory = filteredItems.find(
-            (item) => item.length > 0 && item[0].CategoryName === data.CategoryName
-          );
-
-          return (
-            <div className="row mb-5" key={data._id}>
-              {filteredItemsInCategory && (
-                <>
-                  <div className="fs-3 m-3 category-name">
-                    {data.CategoryName}
-                  </div>
-                  <hr />
-                  <div className="row g-4">
-                    {filteredItemsInCategory.map((filterItems, index) => {
-                      const bgColor = index % 2 === 0 ? "#f5f5f5" : "#dcdcdc"; // light gray and darker gray
-                      return (
-                        <div key={filterItems._id} className="col-12 col-md-6 col-lg-3 mb-4">
-                          <Card
-                            foodItem={filterItems}
-                            options={filterItems.options[0]}
-                            bgColor={bgColor}
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </>
-              )}
-            </div>
-          );
-        })}
       </div>
 
       <Footer />

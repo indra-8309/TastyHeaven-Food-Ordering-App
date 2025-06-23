@@ -1,0 +1,49 @@
+/* ================================
+   🍕 Emoji Spinner Loader
+================================ */
+.emoji-loader {
+  font-size: 3rem;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ================================
+   ✨ Shimmer Effect Styles
+================================ */
+.shimmer-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shimmer-img, .shimmer-text {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+.shimmer-img {
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.shimmer-text {
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.shimmer-text.short {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
