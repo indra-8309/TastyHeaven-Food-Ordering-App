@@ -48,7 +48,8 @@ TastyHeaven is a full-stack food ordering app where users can browse food items,
 
 ```bash
 # Step 1: Clone the repo
-git remote add origin https://github.com/indra-8309/TastyHeaven-Food-Ordering-App.gitcd tasty-heaven
+git remote add origin https://github.com/indra-8309/TastyHeaven-Food-Ordering-App.git
+cd tasty-heaven
 
 # Step 2: Start Backend
 cd backend
