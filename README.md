@@ -48,8 +48,7 @@ TastyHeaven is a full-stack food ordering app where users can browse food items,
 
 ```bash
 # Step 1: Clone the repo
-git clone https://github.com/pravallika-0502/Tasty_Heaven.git
-cd tasty-heaven
+git remote add origin https://github.com/indra-8309/TastyHeaven-Food-Ordering-App.gitcd tasty-heaven
 
 # Step 2: Start Backend
 cd backend
@@ -61,7 +60,7 @@ node admin.js
 
 # admin details
 Email:admin@tastyheaven.com
-Password:kindly contact to pravallika7780@gmail.com
+Password:kindly contact to medamindra@gmail.com
 
 # Step 3: Start Frontend
 npm install

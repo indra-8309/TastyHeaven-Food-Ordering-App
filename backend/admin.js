@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://test:test@cluster0.oegwxzv.mongodb.net/Tasty_Hea
 });
 
 const createAdmin = async () => {
-  const name = "Admin Pravallika";
+  const name = "Admin Indra";
   const email = "admin@tastyheaven.com";
   const plainPassword = "admin";
   // const name = "Team5";
